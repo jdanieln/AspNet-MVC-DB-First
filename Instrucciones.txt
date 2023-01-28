@@ -1,0 +1,15 @@
+//INSTALAMOS ESTOS PAQUETES
+EntityFramework
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+//EJECUTAMOS EL COMANDO POR MEDIO DEL PACKAGE MANAGER
+Scaffold-DbContext "Data Source=DESKTOP-766JR7V;Initial Catalog=Northwind;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+//CADENA DE CONEXIÓN PARA EL APPSETTINGS.JSON
+
+  "ConnectionStrings": {
+    "NorthwindContext": "Data Source=DESKTOP-766JR7V;Initial Catalog=Northwind;Integrated Security=True"
+  }
